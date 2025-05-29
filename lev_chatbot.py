@@ -1,7 +1,7 @@
 import pandas as pd
 
 # 이전에 작성한 레벤슈타인 거리 계산 함수
-def calc_distance(a, b): 
+def calc_distance(a, b):
     if a == b:
         return 0  # 두 문자열이 같으면 편집 거리는 0
     a_len = len(a)
@@ -31,7 +31,6 @@ def calc_distance(a, b):
                 matrix[i - 1][j - 1] + cost  # 대체 또는 일치
             )
     return matrix[a_len][b_len]
-
 
 class LevenshteinChatBot:
     def __init__(self, filepath):
